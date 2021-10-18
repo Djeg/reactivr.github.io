@@ -31,7 +31,7 @@ code {
   padding: var(--defaultPadding);
   background-color: var(--green);
   border-radius: 5px;
-  color: var(--black-green);
+  color: var(--white);
   outline: none;
   border: none;
   cursor: pointer;
