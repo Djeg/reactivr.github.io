@@ -1,2 +1,1 @@
-# reactivr.github.io
-Documentation website for reactivr
+# ReactiveR documentation website

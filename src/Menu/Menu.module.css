@@ -1,0 +1,10 @@
+.menuPanel {
+  width: 400px;
+  background-color: var(--black-green);
+}
+
+@media only screen and (max-width: 1007px) {
+  .menuPanel {
+    min-width: 100vw;
+  }
+}

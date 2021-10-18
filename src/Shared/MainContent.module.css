@@ -1,0 +1,29 @@
+.mainContent {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-grow: 2;
+}
+
+.mainContent > div {
+  transition: all 0.25s;
+  transform: translateX(-400px);
+}
+
+.open > div {
+  transform: translateX(0px);
+}
+
+@media only screen and (max-width: 1007px) {
+  .mainContent > div {
+    transform: translateX(-100vw);
+  }
+
+  .open > div {
+    transform: translateX(0px);
+  }
+}
+
+.content {
+  padding: 0 var(--lightPadding);
+}

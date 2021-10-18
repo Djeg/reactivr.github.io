@@ -1,0 +1,24 @@
+.header {
+  background-color: var(--black-green);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--lightPadding) 0;
+}
+
+.hamburger {
+  padding: var(--defaultPadding);
+}
+
+.hamburgerInner,
+.hamburgerInner::after,
+.hamburgerInner::before {
+  background-color: var(--white) !important;
+}
+
+.github {
+  color: var(--white);
+  font-size: 2rem;
+  padding: var(--defaultPadding);
+}
