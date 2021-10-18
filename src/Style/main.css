@@ -2,9 +2,9 @@
 
 :root {
   --black-green: #092934;
+  --green: #1c9c76;
   --white: #f7f7f2;
   --beige: #ebedd4;
-  --green: #687359;
 
   --defaultPadding: 0.8rem;
   --lightPadding: 0.6rem;
@@ -24,4 +24,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.btn {
+  display: block;
+  padding: var(--defaultPadding);
+  background-color: var(--green);
+  border-radius: 5px;
+  color: var(--black-green);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h1,
+p {
+  margin: var(--defaultPadding) 0;
 }

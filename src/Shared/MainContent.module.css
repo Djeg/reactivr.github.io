@@ -23,7 +23,3 @@
     transform: translateX(0px);
   }
 }
-
-.content {
-  padding: 0 var(--lightPadding);
-}

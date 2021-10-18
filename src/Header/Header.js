@@ -3,12 +3,36 @@ import Logo from './Logo'
 import styles from './Header.module.css'
 import * as Menu from '../Menu/Menu'
 import { Link } from 'react-router-dom'
-import { useSelector, useForeignActionEvent } from 'reactivr'
+import {
+  useSelector,
+  useForeignActionEvent,
+  action,
+  when,
+  reduce,
+} from 'reactivr'
+import { assoc } from 'ramda'
+
+/**
+ * Contains the name of this module
+ */
+export const name = Symbol('header')
+
+/**
+ * Contains the state of the header
+ */
+export const state = {
+  displayLogo: true,
+}
+
+/**
+ * Display or not the logo
+ */
+export const setLogo = action(when('setLogo'), reduce(assoc('displayLogo')))
 
 /**
  * Display the header
  */
-export default function Header() {
+export const View = ({ displayLogo }) => {
   const { open } = useSelector(Menu)
   const onMenuToggle = useForeignActionEvent('@default', Menu.toggle)
 
@@ -25,9 +49,11 @@ export default function Header() {
           <span className={`hamburger-inner ${styles.hamburgerInner}`}></span>
         </span>
       </button>
-      <Link to="/">
-        <Logo width="40" height="40" />
-      </Link>
+      {displayLogo && (
+        <Link to="/">
+          <Logo width="40" height="40" />
+        </Link>
+      )}
       <a
         href="https://github.com/Djeg/reactivr/tree/master"
         target="_blank"
