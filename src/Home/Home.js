@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../Header/Logo'
 import styles from './Home.module.css'
 
@@ -14,7 +15,9 @@ export default function Home() {
       <h1>ReactiveR</h1>
       <p className={styles.sub}>State, Action and Effect at your fongertips</p>
       <p>
-        <button className="btn">Get Started</button>
+        <Link to="/get-started" className="btn">
+          Get Started
+        </Link>
       </p>
     </div>
   )

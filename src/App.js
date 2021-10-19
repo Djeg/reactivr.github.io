@@ -6,6 +6,7 @@ import * as Header from './Header/Header'
 import MainContent from './Shared/MainContent'
 import styles from './App.module.css'
 import Home from './Home/Home'
+import GetStarted from './GetStarted/GetStarted'
 
 export default function App() {
   return (
@@ -20,6 +21,9 @@ export default function App() {
           <MainContent>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/get-started" exact>
+              <GetStarted />
             </Route>
           </MainContent>
         </div>

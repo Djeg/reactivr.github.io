@@ -13,7 +13,7 @@ export default function MainContent({ children }) {
   return (
     <div className={`${styles.mainContent} ${open ? styles.open : ''}`}>
       <Render state={Menu} />
-      <div>{children}</div>
+      <div className={styles.content}>{children}</div>
     </div>
   )
 }

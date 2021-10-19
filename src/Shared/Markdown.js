@@ -1,6 +1,7 @@
 import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import style from 'react-syntax-highlighter/dist/esm/styles/prism/material-dark'
 
 /**
  * Display a markdown with inline
@@ -18,6 +19,7 @@ export default function Markdown({ content }) {
             <SyntaxHighlighter
               children={String(children).replace(/\n$/, '')}
               language={match[1]}
+              style={style}
               PreTag="div"
               {...props}
             />
